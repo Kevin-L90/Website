@@ -1,24 +1,46 @@
-* {
-	text-align: center;
-	font-size:18px;
-	color:black;
-}
-
 body {
-	background: linear-gradient(-45deg, #dd6a1c, #e0b090);
+  background-image: url(Background.png)
 }
 
-p {
-	font-family: 'Arial';
+header {
+  display: flex;
+  justify-content: flex-end;
 }
 
-h2 {text-align: center;
-font: 'Arial'
+a {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: sans-serif;
 }
 
-div {text-align: center;}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
 
-.floating {
-	float: left;
-	width: 33%;
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+#Portrait {
+  margin-left: 15px;
+  margin-top: 350px;
+  float: left;
+}
+
+#AboutMe {
+  margin-left: 50px;
+  margin-top: 350px;
+  float: left;
 }
