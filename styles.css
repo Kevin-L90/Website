@@ -1,5 +1,13 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
 body {
-  background-image: url(Background.png)
+  background-image: url(Background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header {
@@ -8,9 +16,8 @@ header {
 }
 
 a {
-  padding-left: 20px;
-  padding-right: 20px;
-  font-family: sans-serif;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 a:visited {
@@ -33,14 +40,123 @@ a:link {
   color: black;
 }
 
-#Portrait {
-  margin-left: 15px;
-  margin-top: 350px;
-  float: left;
+.About-Me {
+  margin-top: 12%;
+  position: absolute;
 }
 
-#AboutMe {
-  margin-left: 50px;
-  margin-top: 350px;
-  float: left;
+.Slideshow {
+  top: 1050px;
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.Slide {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.Plang{
+  top: 650px;
+  position: absolute;
+}
+
+#Portrait {
+  max-width: 300px;
+  max-height: 900px;
+  position: absolute;
+  border-radius: 25px;
+}
+
+#About-Me{
+  margin-left: 35%;
+  margin-top: 5%;
+  text-indent: 40px;
+}
+
+#Plang-top{
+  margin-left: 350px;
+}
+
+#R1{
+  margin-left: 30%;
+  position: absolute;
+}
+
+#R2{
+  margin-left: 65%;
+  position: absolute;
+}
+
+#R3{
+  margin-left: 95%;
+  position: absolute;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }

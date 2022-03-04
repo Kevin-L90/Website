@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link href="styles.css" rel="stylesheet">
+		<title>Kevin Liu</title>
+	</head>
+	<body>
+		<header>
+			<h2>
+				<a href="?" target="_blank" rel="noreferrer">Home</a>
+				<a href="https://github.com/Kevin-L90?tab=repositories" target="_blank" rel="noreferrer">Projects</a>
+				<a href="Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+			</h2>
+		</header>
+		<div class="About-Me">
+			<img id="Portrait" src="Portrait.jpg">
+			<p id="About-Me">Hello! My name is Kevin Liu and this is my personal website.
+					This will act as my personal resume website, but it is currently a work in progress.
+					As of the creation of this website,
+					 I am a sophomore student studying Computer Science at the University of British Columbia.
+					This website aims to outline some of skills and experiences I have.
+			</p>
+			<p style="margin-left: 35%;margin-top: 20px;text-indent: 40px;">
+				I am a Chinese Canadian born in Toronto.
+				Some of the hobbies I enjoy are swimming, skiing, badminton, and playing board games.
+			</p>
+		</div>
+		<div class="Slideshow">
+			<div class="Slide fade">
+				<img src="img/1.jpg" style="width:100%">
+				<div class="text">Skiing</div>
+			</div>
+			<div class="Slide fade">
+				<img src="img/2.jpg" style="width:100%">
+				<div class="text">Building a snowman</div>
+			</div>
+			<div class="Slide fade">
+				<img src="img/3.jpg" style="width:100%">
+				<div class="text">Swim meet</div>
+			</div>
+			<br>
+			<div style="text-align:center">
+			  <span class="dot" onclick="currentSlide(1)"></span>
+			  <span class="dot" onclick="currentSlide(2)"></span>
+			  <span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<div class="Plang">
+			<p id="Plang-top">Some of the programming languages that I have experience with are:</p>
+			<ul id="R1">
+				<li>Java</li>
+				<li>C++</li>
+			</ul>
+			<ul id="R2">
+				<li>HTML</li>
+				<li>R</li>
+			</ul>
+			<ul id="R3">
+				<li>CSS</li>
+				<li>Racket</li>
+			</ul>
+		</div>
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("Slide");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			      slides[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+			      dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			}
+		</script>
+	</body>
+</html>
